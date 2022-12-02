@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@48,400,0,0" />
+</head>
+<body>
+
+    <div class="container1">
+        <aside  >
+            <div class="top">
+                <div class="logo">
+                    <h2>HAW<span class="danger">ALA</span></h2>
+                </div>
+            </div>
+            <div class="sidebar">
+                <a routerLinkActive="active" routerLink="dashboard" >
+                    <span class="material-symbols-sharp">dashboard</span>
+                    <h3>Dashboard</h3>
+                </a>
+                <a routerLinkActive="active"  routerLink="adduser" >
+                    <span class="material-symbols-sharp">person</span>
+                    <h3>Customers</h3>
+                </a>
+                <a href="#">
+                    <span class="material-symbols-sharp">receipt_long</span>
+                    <h3>Orders</h3>
+                </a>
+                <a href="#">
+                    <span class="material-symbols-sharp">monitoring</span>
+                    <h3>Analytics</h3>
+                </a>
+                <a href="#">
+                    <span class="material-symbols-sharp">mail</span>
+                    <h3>Messages</h3>
+            
+                </a>
+                <a href="#">
+                    <span class="material-symbols-sharp">inventory</span>
+                    <h3>Products</h3>
+                </a>
+                <a href="#">
+                    <span class="material-symbols-sharp">report</span>
+                    <h3>Reports</h3>
+                </a>
+                <a href="#">
+                    <span class="material-symbols-sharp">settings</span>
+                    <h3>Settings</h3>
+                </a>
+                <a href="#">
+                    <span class="material-symbols-sharp">add</span>
+                    <h3>Add Product</h3>
+                </a>
+                <a href="#">
+                    <span class="material-symbols-sharp">logout</span>
+                    <h3>Logout</h3>
+                </a>
+            </div>
+        </aside>
+        <!-----------  END OF ASIDE MENU SIDEBAR ----------->
+    </div>
+    <main>
+        <div class="topbar" >
+            <div class="user">
+                <span>Jawad Ali</span>
+                <i class="bi bi-person-circle"></i>
+            </div>
+        </div>
+
+        <div style="width: 90%; margin-left: auto; margin-right: auto; padding:2% 0%;">
+            <p>
+                    <router-outlet> </router-outlet>
+        
+                </p>
+            </div>
+        </main>
+</body>
+</html>

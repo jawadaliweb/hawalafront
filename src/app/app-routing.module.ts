@@ -1,10 +1,16 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AdduserComponent } from './adduser/adduser.component';
+import { CustomersComponent } from './customers/customers.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent, children: [
-    {path: '**', redirectTo: ''}
+    {path:'dashboard', component:DashboardComponent},
+    {path:'adduser', component:AdduserComponent},
+    {path:'customers', component:CustomersComponent},
+    {path: '**', redirectTo: ''},
   ]},
 ];
 
