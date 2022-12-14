@@ -1,5 +1,5 @@
 @import "~bootstrap-icons/font/bootstrap-icons.css";
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&family=Poppins:wght@300&family=Roboto:wght@300&display=swap');
 
 * {
     margin: 0;
@@ -10,6 +10,7 @@
     text-decoration: none;
     list-style: none;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
 html {
@@ -28,6 +29,7 @@ body {
 
 a {
     color: #363949;
+    font-family: 'Poppins', sans-serif;
 }
 
 img { 
@@ -38,6 +40,7 @@ img {
 h1 {
     font-weight: 800;
     font-size: 1.8rem;
+    font-family: 'Poppins', sans-serif;
 }
 
 h2 {
@@ -82,7 +85,10 @@ b {
 .primary {
     color: #7380ec;
 }
-
+.col-col
+{
+    color: #7380ec;
+}
 .danger {
     color: #ff7782;
 }

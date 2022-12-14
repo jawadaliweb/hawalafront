@@ -1,0 +1,144 @@
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&family=Poppins:wght@300&family=Roboto:wght@300&display=swap");
+$base-color: #7380ec;
+.cut-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1% 0%;
+}
+table {
+  width: 100%;
+  vertical-align: middle;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.801);
+}
+tbody tr {
+  border-bottom: 1px solid rgba(57, 57, 57, 0.335) !important;
+}
+tbody tr:hover {
+  background-color: rgba(161, 160, 160, 0.136);
+}
+table th {
+  font-size: 15px;
+  background-color: $base-color;
+  color: white;
+  height: 50px;
+  vertical-align: middle;
+}
+table td {
+  height: 50px;
+}
+.cut-top button:hover {
+  background-color: $base-color;
+  border: 1px solid white;
+  color: white;
+}
+.cut-top button {
+  background-color: transparent;
+  border: 1px solid $base-color;
+  color: $base-color;
+}
+.icon-edit:hover {
+  background-color: $base-color;
+  color: white;
+  padding: 7px 8px;
+  border-radius: 300px;
+}
+
+.icon-edit {
+  background-color: white;
+  color: $base-color;
+  border: 1px solid $base-color;
+  padding: 7px 8px;
+  border-radius: 300px;
+  cursor: pointer;
+}
+
+.icon-delete {
+  background-color: white;
+  color: $base-color;
+  border: 1px solid $base-color;
+  padding: 7px 8px;
+  border-radius: 300px;
+  cursor: pointer;
+}
+
+.icon-delete:hover {
+  background-color: $base-color;
+  color: white;
+  padding: 7px 8px;
+  border-radius: 300px;
+}
+.modal-header {
+  background-color: $base-color;
+  color: white;
+}
+.close {
+  border: 0px;
+  font-size: 17px;
+  border-radius: 20px;
+  padding: 1px 9px;
+  color: #7380ec;
+}
+
+.form-group {
+  padding-top: 10px;
+}
+.cust-save {
+  background-color: white;
+  border: 1px solid $base-color;
+  color: $base-color;
+  margin-top: 20px;
+  padding: 1% 3%;
+  border-radius: 4px;
+}
+
+.cust-save:hover {
+  background-color: $base-color;
+  border: 1px solid $base-color;
+  color: white;
+  margin-top: 20px;
+  padding: 1% 3%;
+  border-radius: 4px;
+}
+.success-message {
+  display: flex;
+  border-radius: 6px;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #ffffff;
+  width: 15%;
+  color: $base-color;
+  height: 70px;
+  text-align: center;
+  position: absolute;
+  top: 10%;
+  box-shadow: 1px 1px 12px 6px rgba(0, 0, 0, 0.074);
+  left: 82%;
+}
+
+.success-message h5 {
+  font-size: 18px;
+  padding-top: 10px;
+}
+.success-message .cross {
+  border-radius: 2px;
+  color: white;
+  padding: 1px 4px;
+  background-color: #7380ec;
+  position: absolute;
+  font-size: 12px !important;
+  top: 0%;
+  left: 92.2%;
+}
+
+.success-message .greensign {
+  border-radius: 200px;
+  color: white;
+  padding: 1px 6px;
+
+  background-color: #7380ec;
+  font-size: 20px !important;
+}

@@ -1,1 +1,147 @@
-<p>customers works!</p>
+<div *ngIf="" class="success-message">
+  <i class="greensign bi bi-check"></i>
+  <h5>Name is Required</h5>
+  <i (click)="cicon($event)" class="cross bi bi-x"></i>
+</div>
+
+<div class="cut-top">
+  <h3>Customers</h3>
+
+  <button
+    type="button"
+    class="btn btn-primary"
+    data-bs-toggle="modal"
+    data-bs-target="#exampleModal"
+    id="addcustbutton"
+    (click)="reset()"
+  >
+    Add
+  </button>
+</div>
+
+<!-- Button trigger modal -->
+
+<!-- Modal -->
+<div
+  class="modal fade"
+  id="exampleModal"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Add Customers</h5>
+        <button
+          type="button"
+          class="close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+          id="custFormModelClose"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form action="" [formGroup]="custform">
+          <div class="form-group">
+            <label for="exampleInputEmail1">Name</label>
+            <input
+              formControlName="name"
+              type="text"
+              class="form-control"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+              placeholder="Enter Name"
+            />
+            <div
+              *ngIf="name?.invalid && isClicked"
+              class="mt-2 mb-0 alert alert-danger"
+              role="alert"
+            >
+              <p class="mb-0">Name is required</p>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Address</label>
+            <input
+              formControlName="address"
+              type="text"
+              class="form-control"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+              placeholder="Enter Address"
+            />
+            <div
+              *ngIf="address?.invalid && isClicked"
+              class="mt-2 mb-0 alert alert-danger"
+              role="alert"
+            >
+              <p class="mb-0">address is required</p>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="exampleInputEmail1">Phone</label>
+            <input
+              formControlName="phone"
+              type="text"
+              class="form-control"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+              placeholder="phone"
+            />
+            <div
+              *ngIf="phone?.invalid && isClicked"
+              class="mt-2 mb-0 alert alert-danger"
+              role="alert"
+            >
+              <p class="mb-0">phone is required</p>
+            </div>
+          </div>
+
+          <button
+            type="button"
+            class="btn btn-primary cust-save"
+            (click)="addCustomer()"
+          >
+            Save
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<table class="table align-middle">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Address</th>
+      <th scope="col">Phone</th>
+      <th colspan="2" scope="col">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let cust of customer.customers">
+      <td [width]="104">{{ cust.id }}</td>
+      <td>{{ cust.name }}</td>
+      <td>{{ cust.address }}</td>
+      <td>{{ cust.phone }}</td>
+      <td
+        data-bs-toggle="modal"
+        data-bs-target="#exampleModal"
+        (click)="edit(cust.id)"
+        [width]="33"
+      >
+        <i class="icon-edit bi bi-pen-fill"></i>
+      </td>
+      <td [width]="33" (click)="delete(cust.id)">
+        <i class="icon-delete bi bi-x-lg"></i>
+      </td>
+    </tr>
+  </tbody>
+</table>

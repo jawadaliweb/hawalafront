@@ -1,0 +1,49 @@
+<div
+  style="
+    background-color: #7875b5;
+    padding-top: 12% !important;
+    padding-bottom: 137px;
+  "
+  class="d-flex justify-content-center container-fluid"
+>
+  <div class="screen">
+    <div class="screen__content">
+      <form (ngSubmit)="loginprocess()" class="login" [formGroup]="loginform">
+        <div class="login__field">
+          <i class="login__icon fas fa-user"></i>
+          <input
+            type="text"
+            class="login__input"
+            placeholder="text"
+            formControlName="username"
+          />
+        </div>
+        <div class="login__field">
+          <i class="login__icon fas fa-lock"></i>
+          <input
+            type="password"
+            class="login__input"
+            placeholder="Password"
+            formControlName="password"
+          />
+        </div>
+        <button class="button login__submit">
+          <span class="button__text">Login</span>
+          <i class="button__icon fas fa-chevron-right"></i>
+        </button>
+        <div
+          class="alert alert-danger alert-dismissible fade show mt-4 p-3"
+          *ngIf="wrongLogin"
+        >
+          <strong>Username or/and Password Wrong!</strong>
+        </div>
+      </form>
+    </div>
+    <div class="screen__background">
+      <span class="screen__background__shape screen__background__shape4"></span>
+      <span class="screen__background__shape screen__background__shape3"></span>
+      <span class="screen__background__shape screen__background__shape2"></span>
+      <span class="screen__background__shape screen__background__shape1"></span>
+    </div>
+  </div>
+</div>
